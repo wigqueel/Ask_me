@@ -24,8 +24,6 @@ class TokenAllowAnyAuthentication(authentication.TokenAuthentication):
         elif len(auth) > 2:
             msg = _('Invalid token header. Token string should not contain spaces.')
             raise exceptions.AuthenticationFailed(msg)
-        # import pudb;
-        # pudb.set_trace()
         try:
             token = auth[1].decode()
             if token == 'null':
