@@ -14,7 +14,6 @@ axios.defaults.baseURL= 'https://now-ask-me.herokuapp.com'
 //axios.defaults.baseURL= ''
 
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-//const composeEnhances =  compose
 
 const store = createStore(reducer, composeEnhances(
   applyMiddleware(thunk)
