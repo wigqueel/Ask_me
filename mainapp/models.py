@@ -28,7 +28,9 @@ class MyUser(models.Model):
 
 
 def create_my_user(sender, instance, created, **kwargs):
-
+    """
+    Create MyUser object
+    """
     if created:
 
         MyUser.objects.create(user=instance)
