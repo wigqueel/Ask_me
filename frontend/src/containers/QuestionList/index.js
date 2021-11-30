@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {Typography,Box} from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
@@ -8,7 +9,7 @@ import {connect} from 'react-redux'
 
 
 const styles = theme => ({
-
+// empty styles
 
 });
 
