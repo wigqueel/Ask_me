@@ -13,7 +13,7 @@ class AnswerCreateView(generics.CreateAPIView):
     Creates answers
     """
 
-    serializer_class = AnswerCreateSerializer
+    serializer_class = AnswerSerializer
     queryset = Answer.objects.all()
 
 

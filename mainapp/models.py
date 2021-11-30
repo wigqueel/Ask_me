@@ -18,8 +18,6 @@ class MyUser(models.Model):
     isAnonymousQuestionsAllowed = models.BooleanField(default=True)
     isUserAnswersVisibleInFeed = models.BooleanField(default=True)
 
-    # friends  = models.ManyToManyField('self',related_name='related_friends',blank=True)
-
     def __str__(self):
         return self.user.username
 
