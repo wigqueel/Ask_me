@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {Typography,Box} from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
@@ -6,18 +7,15 @@ import Question from '../../components/Question'
 import axios from 'axios'
 import {connect} from 'react-redux'
 
-
 const styles = theme => ({
-
+// empty styles
 
 });
-
 
 class QuestionList extends React.Component{
 
   constructor(props){
     super(props)
-
     this.state = {
       questions : [],
       error: ''
@@ -42,32 +40,24 @@ class QuestionList extends React.Component{
         error: err
       })
     })
-
   }
-
   componentWillReceiveProps(newProps){
     if (newProps.token){
       this.fetchQuestions(newProps.token)
     }
-
   }
-
   componentDidMount(){
-
     if (this.props.token !== null){
       this.fetchQuestions(this.props.token)
     }
   }
-
   removeQuestion= (questionId) => {
     //1.fin INDEX of object with given //
     const questions = this.state.questions.filter(question => question.id !== questionId)
     this.setState({questions:questions})
   }
-
   render(){
     //const { classes } = this.props;
-
     return(
       <Box>
         <Typography variant='h4'>
@@ -80,7 +70,6 @@ class QuestionList extends React.Component{
             <Box key={question.id} my={2}>
               <Question  question= {question} handleDelete={this.removeQuestion}/>
             </Box>
-
             : {}
           ))
         }
@@ -88,6 +77,7 @@ class QuestionList extends React.Component{
     )
   }
 }
+
 
 QuestionList.propTypes = {
   classes: PropTypes.object.isRequired,
